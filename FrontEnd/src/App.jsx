@@ -23,7 +23,7 @@ const [review, setReview] = useState(``)
     Prism.highlightAll();
   },[])
  async function reviewCode(){
-   const response = await axios.post('http://localhost:3000/ai/get-review', {code})
+   const response = await axios.post('https://ai-code-review-psrw.onrender.com/ai/get-review', {code})
    setReview(response.data)
  }
   return (
